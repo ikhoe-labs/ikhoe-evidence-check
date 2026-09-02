@@ -2,11 +2,15 @@
 
 **Automated data-quality and consistency auditing for CSV data, with deterministic, verifiable evidence.**
 
-## What it does
+## Product
 
-IKHOE Evidence Check helps teams inspect CSV datasets before analysis, reporting, automation, or AI/data pipelines.
+IKHOE Evidence Check helps teams inspect CSV datasets before analysis, reporting, automation, or AI/data workflows. The service is designed to surface observable data-quality signals and produce inspectable evidence, including an input fingerprint and deterministic audit results.
 
-The service is designed to surface data-quality signals and produce evidence that can be independently inspected, including an input fingerprint and deterministic audit results.
+**Current offer:** COP 39,900/month.
+
+**Product landing:** `index.html` in this repository.
+
+**Checkout:** https://cohere-api.lemonsqueezy.com/checkout/buy/29ddd963-ec5a-40cf-a9d0-e6e51401b25c
 
 ## Who it is for
 
@@ -16,36 +20,32 @@ The service is designed to surface data-quality signals and produce evidence tha
 - AI/data teams validating inputs before pipelines
 - Developers integrating data-quality checks through an API
 
-## Product
-
-**IKHOE Evidence Check** is currently offered as a subscription product at **COP 39,900/month**.
-
-### API
+## Public API
 
 Production API: https://ikhoe-evidence-check-api.vercel.app
 
-RapidAPI distribution: https://rapidapi.com/
+Health check: https://ikhoe-evidence-check-api.vercel.app/api/health
 
-Postman documentation and examples are maintained as a separate developer surface.
+RapidAPI Hub: https://rapidapi.com/
 
-## Demonstration
+## Public repository boundary
 
-A short product demonstration will show the public API health check, product contract, a real Evidence Check request, and the resulting verifiable response.
+This repository is a public product and documentation surface. It intentionally does **not** contain private implementation, proprietary algorithms, internal automation, private infrastructure configuration, credentials, secrets, private prompts, or commercial strategy.
 
-## What we do not publish
-
-This repository intentionally does **not** contain IKHOE's private processing implementation, proprietary algorithms, internal automation, private infrastructure configuration, credentials, secrets, commercial strategy, or private operational systems.
-
-This repository is a public product/documentation surface only.
+Do not add secrets, `.env` files, access tokens, private keys, internal source code, or confidential operational material to this repository.
 
 ## Limitations
 
-IKHOE Evidence Check is intentionally conservative. Results are evidence about the supplied dataset and should not be interpreted as a guarantee about business correctness, truth, or downstream decisions.
+Evidence Check reports observable signals about the supplied dataset. It does not guarantee that a dataset is truthful, complete, business-correct, or suitable for a particular downstream decision.
+
+## Demonstration
+
+A short demonstration should show the public product surface and real API behavior without exposing credentials or private implementation.
 
 ## Status
 
-The API is deployed and being prepared for public commercial distribution. Lemon Squeezy store activation is under review.
+The API is deployed and the product is being prepared for public commercial distribution. Lemon Squeezy store activation is under review.
 
 ## Contact
 
-For product or integration inquiries, use the contact information published on the official IKHOE product landing page.
+Use the official product landing page for product and integration information.
