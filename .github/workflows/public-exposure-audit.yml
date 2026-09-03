@@ -1,0 +1,44 @@
+name: Public Exposure Audit
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  exposure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Audit tracked files for likely secrets
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git grep -nE '(AKIA[0-9A-Z]{16}|ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-[A-Za-z0-9]{20,}|-----BEGIN (RSA|OPENSSH|EC|PRIVATE) KEY-----|xox[baprs]-[A-Za-z0-9-]{10,}|AIza[0-9A-Za-z_-]{20,})' -- ':!SECURITY.md'; then
+            echo 'Potential credential material detected in tracked content.'
+            exit 1
+          fi
+
+      - name: Audit for private implementation markers
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git grep -nEi '(supabase service_role|vercel token|private key|secret key|database password|authorization: bearer)' -- ':!SECURITY.md'; then
+            echo 'Potential private operational material detected.'
+            exit 1
+          fi
+
+      - name: Audit repository hygiene
+        shell: bash
+        run: |
+          set -euo pipefail
+          test ! -d .wrangler
+          test ! -d .venv
+          test ! -d node_modules
