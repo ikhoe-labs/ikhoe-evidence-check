@@ -1,14 +1,24 @@
 # IKHOE Evidence Check
 
-**Automated data-quality and consistency auditing for CSV data, with deterministic, verifiable evidence.**
+**Deterministic data-quality auditing with evidence you can inspect and verify.**
 
-## Product
+## What IKHOE is building
 
-IKHOE Evidence Check helps teams inspect CSV datasets before analysis, reporting, automation, or AI/data workflows. The service is designed to surface observable data-quality signals and produce inspectable evidence, including an input fingerprint and deterministic audit results.
+IKHOE Labs is developing an evidence-first operational intelligence stack. The public product is intentionally narrow: **IKHOE Evidence Check** turns a supplied CSV into deterministic quality signals and an inspectable evidence record.
+
+The broader IKHOE architecture is being developed privately around a simple operational rule:
+
+> `implemented != functioning != connected != executed != evidenced`
+
+A capability is not promoted to operational status merely because code exists. Execution, real effects, provenance, and evidence must be observed before stronger claims are made.
+
+## Current product
+
+IKHOE Evidence Check helps teams inspect CSV datasets before analysis, reporting, automation, or AI/data workflows. It can surface observable signals such as schema structure, missing values, exact duplicate rows, an input SHA-256 fingerprint, and a deterministic audit run identifier.
 
 **Current offer:** COP 39,900/month.
 
-**Product landing:** `index.html` in this repository.
+**Product landing:** `public/index.html`.
 
 **Checkout:** https://cohere-api.lemonsqueezy.com/checkout/buy/29ddd963-ec5a-40cf-a9d0-e6e51401b25c
 
@@ -18,7 +28,7 @@ IKHOE Evidence Check helps teams inspect CSV datasets before analysis, reporting
 - Small businesses preparing operational data for decisions
 - Finance and accounting teams checking datasets before analysis
 - AI/data teams validating inputs before pipelines
-- Developers integrating data-quality checks through an API
+- Developers integrating deterministic data checks into workflows
 
 ## Public API
 
@@ -26,7 +36,33 @@ Production API: https://ikhoe-evidence-check-api.vercel.app
 
 Health check: https://ikhoe-evidence-check-api.vercel.app/api/health
 
-RapidAPI Hub: https://rapidapi.com/
+## Evidence model
+
+Evidence Check distinguishes an observed record from independent verification. An artifact can be **recorded** when the API fingerprints and inspects it. It is **verified** only when an independently supplied SHA-256 expectation matches the observed artifact. If that expectation is absent, the system does not self-certify the result as independently verified.
+
+This conservative model is part of the product direction: claims should be traceable to evidence rather than inferred from implementation state.
+
+## Product family and roadmap
+
+### Available now
+
+**Evidence Check** — deterministic CSV data-quality evidence.
+
+**Evidence API** — programmatic access for integration workflows.
+
+### In development / gated
+
+**Governed Automation** — bounded execution with explicit authorization and evidence gates.
+
+**Operational Trust** — enterprise-oriented assurance around real operational evidence, provenance, execution, and verification.
+
+These future surfaces are not represented as fully operational until their relevant runtime paths are demonstrated.
+
+## Current development milestone
+
+The private IKHOE stack has advanced from static architecture toward an operational proof model involving capability selection, bounded execution, evidence collection, and re-audit. The next critical proof is the complete GitHub → HomeCity (Windows) → real action → evidence → GitHub → independent verification loop, repeated consecutively without manual result fabrication.
+
+That milestone is deliberately **not** claimed as complete here until it is empirically demonstrated.
 
 ## Public repository boundary
 
@@ -38,14 +74,10 @@ Do not add secrets, `.env` files, access tokens, private keys, internal source c
 
 Evidence Check reports observable signals about the supplied dataset. It does not guarantee that a dataset is truthful, complete, business-correct, or suitable for a particular downstream decision.
 
-## Demonstration
-
-A short demonstration should show the public product surface and real API behavior without exposing credentials or private implementation.
-
 ## Status
 
-The API is deployed and the product is being prepared for public commercial distribution. Lemon Squeezy store activation is under review.
+**Public product: available.** The landing page and production API are published; the commercial surface is being developed conservatively. Broader IKHOE automation and operational-assurance capabilities remain gated by runtime evidence.
 
 ## Contact
 
-Use the official product landing page for product and integration information.
+Use the product landing page for product and integration information.
