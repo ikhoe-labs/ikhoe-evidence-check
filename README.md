@@ -2,6 +2,10 @@
 
 **Deterministic data-quality auditing with evidence you can inspect and verify.**
 
+> **PROGRESSING · Level 3/5 · 58/100** — public product active; broader IKHOE platform remains evidence-gated.
+>
+> See [`STATUS.md`](STATUS.md) for the current public progress and evidence boundary.
+
 ## What IKHOE is building
 
 IKHOE Labs is developing an evidence-first operational intelligence stack. The public product is intentionally narrow: **IKHOE Evidence Check** turns a supplied CSV into deterministic quality signals and an inspectable evidence record.
