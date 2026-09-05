@@ -1,6 +1,6 @@
 # IKHOE — Public Progress Status
 
-**Fecha de corte:** 2026-09-04  
+**Fecha de corte:** 2026-09-05  
 **Estado:** PROGRESSING  
 **Nivel público:** 3/5 — Producto público activo; plataforma ampliándose bajo gates de evidencia  
 **Índice público de progreso:** 58/100
@@ -11,14 +11,14 @@
 
 - IKHOE Evidence Check es un producto público disponible.
 - El producto realiza auditoría determinista de CSV y conserva evidencia inspeccionable.
-- IKHOE mantiene una separación explícita entre implementación, ejecución, efecto, evidencia y verificación.
-- La plataforma más amplia se desarrolla con controles de autorización, observabilidad y verificación.
+- El puente HomeCity de IKHOE alcanzó el gate operativo definido con dos ejecuciones consecutivas verificadas sin manipulación manual del resultado.
+- La plataforma más amplia mantiene una separación explícita entre implementación, ejecución, efecto, evidencia y verificación.
 
 ## Qué todavía no declaramos como probado
 
-El gate operativo completo **GitHub → HomeCity (Windows) → acción real → efecto observable → evidencia → GitHub → verificación independiente**, repetido consecutivamente sin manipulación manual, permanece pendiente.
+El nuevo **runtime persistente hospedado** todavía no está probado como ejecución autónoma end-to-end. El servicio Railway existe y está configurado, pero no tiene deployment activo registrado.
 
-Por tanto, IKHOE no se presenta públicamente como una plataforma de autonomía end-to-end ya demostrada.
+Además, el runtime persistente aún no tiene un adaptador de ejecución externa conectado; por tanto, una señal de servicio online no equivale por sí sola a autonomía demostrada.
 
 ## Public information boundary
 
@@ -32,8 +32,8 @@ El estado solo sube cuando aumenta la evidencia. También puede bajar si nueva e
 
 ## Próximo multiplicador
 
-Demostrar el gate runtime end-to-end con evidencia independiente y repetible; después, demostrar continuidad de acción y reparación bounded mediante pruebas runtime.
+Cerrar la ejecución persistente hospedada con evidencia independiente y repetible; después demostrar continuidad de acción, reparación bounded y recuperación persistente.
 
 ## Actualización
 
-Este estado está diseñado para revisión diaria. La fecha de corte siempre debe reflejar la última revisión real.
+Este estado refleja la última revisión real disponible y debe volver a reconciliarse después de cada cambio material.
