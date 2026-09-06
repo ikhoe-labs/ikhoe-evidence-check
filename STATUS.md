@@ -1,6 +1,6 @@
 # IKHOE — Public Progress Status
 
-**Fecha de corte:** 2026-09-05  
+**Fecha de corte:** 2026-09-06  
 **Estado:** PROGRESSING  
 **Nivel público:** 3/5 — Producto público activo; plataforma ampliándose bajo gates de evidencia  
 **Índice público de progreso:** 58/100
@@ -13,12 +13,13 @@
 - El producto realiza auditoría determinista de CSV y conserva evidencia inspeccionable.
 - El puente HomeCity de IKHOE alcanzó el gate operativo definido con dos ejecuciones consecutivas verificadas sin manipulación manual del resultado.
 - La plataforma más amplia mantiene una separación explícita entre implementación, ejecución, efecto, evidencia y verificación.
+- El runtime persistente hospedado de IKHOE está desplegado en Railway sobre la rama `main`; el deployment observado más reciente fue `SUCCESS` y el endpoint `/health` respondió `200` durante la verificación.
 
 ## Qué todavía no declaramos como probado
 
-El nuevo **runtime persistente hospedado** todavía no está probado como ejecución autónoma end-to-end. El servicio Railway existe y está configurado, pero no tiene deployment activo registrado.
+El runtime persistente hospedado está observado como servicio vivo, pero **no** está certificado como ejecución autónoma end-to-end del flujo externo.
 
-Además, el runtime persistente aún no tiene un adaptador de ejecución externa conectado; por tanto, una señal de servicio online no equivale por sí sola a autonomía demostrada.
+El servicio productivo actual ejecuta `main`, no la rama FORJA de Ingeniero Total. El runtime persistente tampoco tiene un adaptador de ejecución externa real activado; por tanto, servicio online y autonomía demostrada siguen siendo estados distintos.
 
 ## Public information boundary
 
@@ -32,7 +33,7 @@ El estado solo sube cuando aumenta la evidencia. También puede bajar si nueva e
 
 ## Próximo multiplicador
 
-Cerrar la ejecución persistente hospedada con evidencia independiente y repetible; después demostrar continuidad de acción, reparación bounded y recuperación persistente.
+Cerrar la ejecución persistente hospedada con evidencia independiente y repetible; después demostrar continuidad de acción, reparación bounded y recuperación persistente sin confundir health con autonomía.
 
 ## Actualización
 
