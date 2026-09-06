@@ -2,3 +2,12 @@
 .DS_Store
 Thumbs.db
 *.log
+
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+
+# Local credentials / key material
+*.pem
+*.key
