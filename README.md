@@ -64,9 +64,9 @@ These future surfaces are not represented as fully operational until their relev
 
 ## Current development milestone
 
-The private IKHOE stack has advanced from static architecture toward an operational proof model involving capability selection, bounded execution, evidence collection, and re-audit. The next critical proof is the complete GitHub → HomeCity (Windows) → real action → evidence → GitHub → independent verification loop, repeated consecutively without manual result fabrication.
+The private IKHOE stack has advanced from static architecture toward an operational proof model involving capability selection, bounded execution, evidence collection, re-audit, temporal process learning, and continuous functional observation. A new private engineering milestone formalizes continuity across independent process lanes while preserving governance and evidence boundaries.
 
-That milestone is deliberately **not** claimed as complete here until it is empirically demonstrated.
+This is an architectural/experimental milestone, not a claim that the broader autonomous platform is fully operational. The next critical proof remains the complete GitHub → HomeCity (Windows) → real action → evidence → GitHub → independent verification loop, repeated consecutively without manual result fabrication, followed by independent validation of sustained multiplexed execution.
 
 ## Public repository boundary
 
